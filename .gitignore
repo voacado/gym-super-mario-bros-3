@@ -1,8 +1,8 @@
 # Ignore NES ROMs (illegal to redistribute)
 *.nes
 
-# Ignore stable-retro repo (cloned to install)
-stable-repo/
+# Ignore stable-retro (necessary for compilation)
+stable-retro/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

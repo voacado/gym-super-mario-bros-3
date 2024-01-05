@@ -1,16 +1,60 @@
 {
   "info": {
+    "coins": {
+      "address": 32162,
+      "type": "|u1"
+    },
+    "cur_world": {
+      "address": 1831,
+      "type": "|u1"
+    },
+    "level_end_walk": {
+      "address": 1369,
+      "type": ">u1"
+    },
+    "level_zone": {
+      "address": 1048,
+      "type": ">u4"
+    },
     "lives": {
       "address": 1846,
       "type": "|i1"
+    },
+    "mario_form": {
+      "address": 237,
+      "type": ">u1"
+    },
+    "player_hurt": {
+      "address": 1362,
+      "type": ">u1"
     },
     "score": {
       "address": 1813,
       "type": ">u3"
     },
-    "time": {
-      "address": 1800,
-      "type": ">u4"
+    "screen_current": {
+      "address": 18,
+      "type": "|u1"
+    },
+    "screen_max_in_level": {
+      "address": 34,
+      "type": "|u1"
+    },
+    "x_pos_1st_byte": {
+      "address": 144,
+      "type": ">u1"
+    },
+    "x_pos_2nd_byte": {
+      "address": 117,
+      "type": ">u1"
+    },
+    "y_pos_1st_byte": {
+      "address": 162,
+      "type": ">u1"
+    },
+    "y_pos_2nd_byte": {
+      "address": 135,
+      "type": ">u1"
     }
   }
 }
