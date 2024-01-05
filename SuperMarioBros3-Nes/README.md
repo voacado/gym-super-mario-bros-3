@@ -125,3 +125,29 @@ Anytime-power-ups - In a level, pressing Select upgrades Mario's power. (When Ma
 
 Unlimited time - Nothing happens when the timer runs out, and Mario can continue on.
 ```
+
+## Level Progression
+
+#### World 1
+1 -> 2 -> 3 -> 4 -> Fortress -> 5 -> 6 -> Airship
+
+#### World 2
+1 -> 2 -> Fortress -> 3 -> Angry Sun -> 4 -> 5 -> Pyramid -> Airship
+
+#### World 3
+1 -> 2 -> 3 -> Fortress1 -> 4 -> 5 -> 6 -> 7 -> Fortress2 -> 8 -> 9 -> Airship
+
+#### World 4
+1 -> 2 -> 3 -> Fortress1 -> 4 -> 5 -> 6 -> Fortress2 -> Airship
+
+#### World 5
+1 -> 2 -> 3 -> Fortress1 -> Spiral Tower -> 4 -> 5 -> 6 -> 7 -> Fortress2 -> 8 -> 9 -> Airship
+
+#### World 6
+1 -> 2 -> 3 -> Fortress1 -> 4 ->5 -> 6 -> 7 -> Fortress2 -> 8 -> 9 -> 10 -> Fortress3 -> Airship
+
+#### World 7
+1 -> 2 -> 3 -> 4 -> 5 -> Fortress1 -> 6 -> 7 -> 8 -> 9 -> Fortress2 -> Airship
+
+#### World 8
+Tank1 -> Airship1 -> Hand1 -> Hand2 -> Hand3 -> Airship2 -> 1 -> 2 -> Fortress -> Tank2 -> Castle
