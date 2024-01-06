@@ -1,5 +1,12 @@
 # Variable Breakdown
 
+- `clock_hundreds` (1-bit, unsigned)
+    - first value in game clock (if 297, then 2)
+- `clock_tenths` (1-bit, unsigned)
+    - second value in game clock (if 297, then 9)
+- `clock_ones` (1-bit, unsigned)
+    - third value in game clock (if 297, then 7)
+
 - `coins` (1-bit, unsigned)
     - character money
     - 0 to 99 (at 100, resets to 0 and gives a life)
@@ -8,11 +15,13 @@
     - index of current overworld map world 
     - zero-indexed, world 1 == `0`
 
-- `level_end_walk` (1-bit, unsigned)
-    - flag that indicates if player has "finished level"
-        - finished == player automatically walking off level
-    - `0` = no, `255` = yes
-    - TODO: how does this work on airships and boss fights?
+- `fanfare_music` (1-bit, unsigned)
+    - music played upon player "completion" (exiting a level)
+    - useful values:
+        - `1` = death
+        - `4` = fortress boss defeated
+        - `32` = normal tile level completed
+    - NOTE: Unfortunately, for levels like 8-Airship1, where the level ends with an item acquired, this sound effect is the same as getting a power-up out of a block (value `02` at `$4F2`). For scenarios like this, it's best to rely on the `level_zone` variable.
 
 - `level_zone` (4-bit, unsigned)
     - indicates what "zone" in a stage a player is in
@@ -22,6 +31,23 @@
 - `lives` (1-bit, signed)
     - indicates the amount of lives Mario has
     - game over == `-1`
+
+- `map_tile_idx` (1-bit, unsigned)
+    - index (for graphic) of tile Mario is standing on in Overworld Map
+    - useful values:
+        - for level tiles, `idx = level_idx - 2` (for example, level 4 = idx val of 2)
+        - fortress = 133, 201
+        - airship = 175
+        - pipe = 188
+        - mushroom = 80 (orange), 224 (red)
+        - spade = 232
+        - World 2 Exclusives:
+            - angry sun = 104
+            - pyramid = 105
+        - World 5 Exclusives:
+            - spiral tower = 95
+        - World 8 Exclusives:
+            - hand = 230
 
 - `mario_form` (1-bit, unsigned)
     - indicates Mario's current power-up form
@@ -40,6 +66,10 @@
     - by default, the value is `0`
     - upon taking a hit, the value increases to `~100` and decreases
     - this value represents Mario's I-Frames as well as how long he flickers for
+
+- `player_is_dying` (1-bit, unsigned)
+    - flag that determines if Mario is dead
+    - 0 = Not dying, 1 = Dying, 2 = Dropped off screen, 3 = Death due to TIME UP
 
 - `score` (3-bit, unsigned)
     - numeric representation of player score divided by (dec)10
@@ -126,7 +156,7 @@ Anytime-power-ups - In a level, pressing Select upgrades Mario's power. (When Ma
 Unlimited time - Nothing happens when the timer runs out, and Mario can continue on.
 ```
 
-## Level Progression
+# Level Progression
 
 #### World 1
 1 -> 2 -> 3 -> 4 -> Fortress -> 5 -> 6 -> Airship

@@ -1,5 +1,17 @@
 {
   "info": {
+    "clock_hundreds": {
+      "address": 1518,
+      "type": "|u1"
+    },
+    "clock_ones": {
+      "address": 1520,
+      "type": "|u1"
+    },
+    "clock_tenths": {
+      "address": 1519,
+      "type": "|u1"
+    },
     "coins": {
       "address": 32162,
       "type": "|u1"
@@ -8,8 +20,8 @@
       "address": 1831,
       "type": "|u1"
     },
-    "level_end_walk": {
-      "address": 1369,
+    "fanfare_music": {
+      "address": 1268,
       "type": ">u1"
     },
     "level_zone": {
@@ -20,6 +32,10 @@
       "address": 1846,
       "type": "|i1"
     },
+    "map_tile_idx": {
+      "address": 229,
+      "type": "|u1"
+    },
     "mario_form": {
       "address": 237,
       "type": ">u1"
@@ -27,6 +43,10 @@
     "player_hurt": {
       "address": 1362,
       "type": ">u1"
+    },
+    "player_is_dying": {
+      "address": 241,
+      "type": "|u1"
     },
     "score": {
       "address": 1813,
