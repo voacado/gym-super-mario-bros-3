@@ -1,0 +1,2 @@
+nes-py @ git+https://github.com/ItaiBear/nes-py@gymnasium
+gymnasium==0.29.1
